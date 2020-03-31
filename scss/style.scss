@@ -1,0 +1,143 @@
+$border-main: 10px;
+$color-main: green;
+$color-second: white;
+$color-primary: black;
+$p-font: 'Abel', sans-serif;
+@import "keyframes";
+
+
+.active{
+    animation: select 1s ease-in-out;
+}
+.sel{
+    opacity: 1;
+}
+.appear{
+    opacity: 0.5; 
+}
+
+
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noticia Text', serif;
+    background-image: url(images/joshua-bartell-6vvIBTvL90A-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html{
+    width: auto;
+    height: auto;
+}
+
+.control_Section{
+    display: flex;
+    flex-flow: column;
+    padding: 2vh 0 2vh 0;
+    border-bottom: 5px solid white;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: $color-second;
+    margin-bottom: 4vh;
+    .control{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: $color-second;
+        border-radius: $border-main;
+        padding-left: 10px;
+    }
+    .search{
+        font-style: italic;
+        width: 100%;
+        border: none;
+        border-right: 1px solid black;
+        padding-left: 5px;
+        float: left;
+        &:focus{
+           border: 2px solid aqua;
+           transition: 300ms;
+        }
+    }
+    .fa-search{
+        margin-left: 5px;
+        font-size: 1.4rem;
+        padding: 5px;
+        color: black;
+        &:hover{
+            transform: scale(1.2);
+            color: $color-main;
+            cursor: pointer;
+            transition: 300ms;
+            
+        }
+    }
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: auto;
+    height: auto;
+    grid-row-gap: 1rem;
+    background-image: url(images/joshua-bartell-6vvIBTvL90A-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    div{
+        border: 2px solid $color-second;
+        height: auto;
+        width: 31vw;
+        border-radius: $border-main;
+        display: none;
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-flow: column;
+        img{
+           width: 100%;
+           height: 80%;
+            border-top-left-radius: $border-main;
+            border-top-right-radius: $border-main;
+            opacity: 0.6;
+            background-color: black;
+            &:hover{
+                opacity: 1;
+                transition: 750ms ease-in-out;
+                cursor: pointer;
+            }
+
+        }
+        p{
+            color: $color-second;
+            font-size: 0.9rem;
+            font-weight: bold;
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color: brown;
+            border-bottom-left-radius: $border-main;
+            border-bottom-right-radius: $border-main;
+            font-family: $p-font;
+            border-top: 1px solid white;
+            word-break: keep-all;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+}
+
+
+@import "media";

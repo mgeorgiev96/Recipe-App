@@ -1,0 +1,159 @@
+@keyframes select {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.active {
+  animation: select 1s ease-in-out;
+}
+
+.sel {
+  opacity: 1;
+}
+
+.appear {
+  opacity: 0.5;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-family: "Noticia Text", serif;
+  background-image: url(images/joshua-bartell-6vvIBTvL90A-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html {
+  width: auto;
+  height: auto;
+}
+
+.control_Section {
+  display: flex;
+  flex-flow: column;
+  padding: 2vh 0 2vh 0;
+  border-bottom: 5px solid white;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  color: white;
+  margin-bottom: 4vh;
+}
+.control_Section .control {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.control_Section .search {
+  font-style: italic;
+  width: 100%;
+  border: none;
+  border-right: 1px solid black;
+  padding-left: 5px;
+  float: left;
+}
+.control_Section .search:focus {
+  border: 2px solid aqua;
+  transition: 300ms;
+}
+.control_Section .fa-search {
+  margin-left: 5px;
+  font-size: 1.4rem;
+  padding: 5px;
+  color: black;
+}
+.control_Section .fa-search:hover {
+  transform: scale(1.2);
+  color: green;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+  height: auto;
+  grid-row-gap: 1rem;
+  background-image: url(images/joshua-bartell-6vvIBTvL90A-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+}
+.container div {
+  border: 2px solid white;
+  height: auto;
+  width: 31vw;
+  border-radius: 10px;
+  display: none;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
+}
+.container div img {
+  width: 100%;
+  height: 80%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  opacity: 0.6;
+  background-color: black;
+}
+.container div img:hover {
+  opacity: 1;
+  transition: 750ms ease-in-out;
+  cursor: pointer;
+}
+.container div p {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: brown;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: "Abel", sans-serif;
+  border-top: 1px solid white;
+  word-break: keep-all;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media all and (min-width: 750px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 20px;
+  }
+  .container div {
+    width: 22vw;
+  }
+  .container div p {
+    font-size: 1.1rem;
+  }
+
+  .control_Section .control {
+    width: 40%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
